@@ -6,8 +6,8 @@ public class PlayerMovement : MonoBehaviour
 {
     [SerializeField] protected float moveSpeed = 4.5f;
     [SerializeField] protected float jumpForce = 7.5f;
-    private float direction;
-    public bool grounded = false;
+    public float direction;
+    private bool grounded = false;
     private Rigidbody2D rigidBodyObject;
 
 
