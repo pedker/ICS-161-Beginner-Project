@@ -4,18 +4,17 @@ using UnityEngine;
 
 public class LemonBehavior : MonoBehaviour
 {
-    public GameObject player = null;
-    [SerializeField] protected float lifeTime = 0.5f;
-    private float totalLife = 0.0f;
+    public PlayerMovement player;
     [SerializeField] protected float speed = 9.0f;
-    private float lemonDirection;
     private Rigidbody2D lemonBody;
+    private int lemonDirection;
 
     // Start is called before the first frame update
     void Start()
     {
-        lemonDirection = player.GetComponent<PlayerMovement>().direction;
+        player = FindObjectOfType <PlayerMovement>();
         lemonBody = GetComponent<Rigidbody2D>();
+        lemonDirection = player.facingDirection;
     }
 
     // Update is called once per frame

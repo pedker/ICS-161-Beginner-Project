@@ -6,7 +6,9 @@ TagManager:
   tags:
   - Ground
   - Wall
-  - Destructible
+  - Enemy
+  - Lemon
+  - ETank
   layers:
   - Default
   - TransparentFX
